@@ -16,7 +16,7 @@
     "deploy:cloudflare": "node ops/sync_project_config.js && yarn build:production",
     "deploy:github": "node ops/sync_project_config.js && node ops/direct_upload.js",
     "test": "TZ=UTC jest",
-    "deploy:github": "npx pagefind --site dist && node ops/sync_project_config.js && node ops/direct_upload.js"
+    "sync-version": "node ops/sync_microfeed_version.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
