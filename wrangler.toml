@@ -1,6 +1,8 @@
 compatibility_date = "2025-03-14"
-# 全局默认：禁用生产环境的 workers.dev 正式固定域名
-workers_dev = false
+
+# 全局：彻底关闭所有 workers.dev 入口
+workers_dev = false    # 关闭正式固定路由
+preview_urls = false   # 关闭所有随机预览URL（2025新增独立配置）
 
 [[ env.development.d1_databases ]]
 binding = "FEED_DB"
@@ -8,9 +10,9 @@ database_name = "FEED_DB"
 database_id = "id_placeholder"
 
 [env.production]
-# 生产环境显式禁用 workers.dev 路由（继承全局配置，此处显式声明更清晰）
 workers_dev = false
+preview_urls = false
 
 [env.preview]
-# 禁用预览环境的随机预览URL，彻底关闭所有 *.workers.dev 入口
 workers_dev = false
+preview_urls = false
