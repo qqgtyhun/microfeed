@@ -1,18 +1,10 @@
 compatibility_date = "2025-03-14"
 
-# 全局：彻底关闭所有 workers.dev 入口
-workers_dev = false    # 关闭正式固定路由
-preview_urls = false   # 关闭所有随机预览URL（2025新增独立配置）
-
 [[ env.development.d1_databases ]]
 binding = "FEED_DB"
 database_name = "FEED_DB"
 database_id = "id_placeholder"
 
 [env.production]
-workers_dev = false
-preview_urls = false
 
 [env.preview]
-workers_dev = false
-preview_urls = false
